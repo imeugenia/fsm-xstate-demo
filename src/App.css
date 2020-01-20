@@ -1,12 +1,5 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -17,6 +10,61 @@
   color: white;
 }
 
+.App-logo {
+  height: 40vmin;
+}
+
 .App-link {
   color: #09d3ac;
+}
+
+.Wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Input-File {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.Input-File + label {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+  background-color: red;
+}
+
+.Attachment {
+  display: flex;
+  margin-bottom: 2em;
+  border: 1px solid white;
+  padding: 0.5em;
+  border-radius: 0.3em;
+}
+
+button {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  background: none;
+  border: none;
+  color: inherit;
+  margin-left: 1em;
+}
+
+.Retry {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
 }
