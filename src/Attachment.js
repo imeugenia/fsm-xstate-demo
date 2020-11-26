@@ -1,4 +1,5 @@
 import React from 'react'
+import icon from './icon.svg'
 
 const AttachmentLoading = props => {
   return (
@@ -15,7 +16,7 @@ const AttachmentFailure = props => {
   return (
     <div className='Attachment' data-testid='failure'>
       <div className='Retry' onClick={props.onRetry}>
-        <span>{props.error}</span>
+        <span className='Error'>{props.error}</span>
         <span>Click to retry</span>
       </div>
       <button type='button' onClick={props.onCancel}>
@@ -28,6 +29,7 @@ const AttachmentFailure = props => {
 const AttachmentComplete = props => {
   return (
     <div className='Attachment' data-testid='complete'>
+      <img className='Icon' src={icon} alt=''/>
       <div>{props.fileName}</div>
       <button type='button' onClick={props.onCancel}>
         X

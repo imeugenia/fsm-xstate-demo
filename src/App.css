@@ -68,3 +68,13 @@ button {
   flex-direction: column;
   cursor: pointer;
 }
+
+.Icon {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.Error {
+  color: red;
+}
+
